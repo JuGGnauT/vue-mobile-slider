@@ -96,6 +96,13 @@ vue2.0+
         overflow: hidden;
     }
 ```
+### events
+|Name|Type|Default|Default|
+|---|:---:|---|---|
+|change|Function|--|每次滚动触发的回调函数|
+```html
+   <Slider @change="handleChange"></Slider>
+```
 ### Slot
 
 ```html
@@ -107,3 +114,4 @@ vue2.0+
     </div>
 </Slider>
 ```
+
