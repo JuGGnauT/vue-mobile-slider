@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scale=no" />
+    <style>
+        *{margin:0;padding:0;}
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+        <div class="slider-wrapper">
+            <Slider :autoPlay="true" :interval="4000" :loop="true" @change="handleChange">
+                <div v-for="item in sliders">
+                    <a :href="item.linkUrl">
+                        <img :src="item.picUrl"/>
+                    </a>
+                </div>
+            </Slider>
+        </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.5.13/vue.js"></script>
+<script src="../dist/vue-mobile-slider.js"></script>
+<script>
+    Vue.component('slider',VueSlider)
+    new Vue({
+        el:'#app',
+        data:{
+            sliders: [
+                {
+                    "linkUrl": "https://y.qq.com/m/act/classic/v3/index.html?ADTAG=jiaodiantu",
+                    "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000003fOVte2g89l6.jpg",
+                    "id": 14520
+                }, {
+                    "linkUrl": "https://y.qq.com/m/act/chunwan2018/v3/index.html?ADTAG=jiaodiantu",
+                    "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M0000044SNAC19jwin.jpg",
+                    "id": 14341
+                }, {
+                    "linkUrl": "https://y.qq.com/m/act/HiddenSinger2/v3/index.html?ADTAG=jiaodiantu&_video=true",
+                    "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000004KzpJN0GWUnZ.jpg",
+                    "id": 14545
+                }, {
+                    "linkUrl": "http://y.qq.com/w/album.html?albummid=00399uHz0x76pg",
+                    "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M0000037tAz71yXxw9.jpg",
+                    "id": 14519
+                }, {
+                    "linkUrl": "https://c.y.qq.com/node/m/client/music_headline/index.html?_hidehd=1&_button=2&zid=610955",
+                    "picUrl": "http://y.gtimg.cn/music/photo_new/T003R720x288M000003bQK163eMtsJ.jpg",
+                    "id": 14508
+                }]
+        },
+        methods:{
+            handleChange(index){
+                console.log(index)
+            }
+        }
+    })
+</script>
+</body>
+</html>
