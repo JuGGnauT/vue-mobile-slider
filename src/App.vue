@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-    import Slider from './vue-slider.vue'
+    import Slider from 'vue-mobile-slider'
 
     export default {
         data() {

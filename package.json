@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "a vue-slider plugin for mobile",
   "main": "src/index.js",
+  "keywords": ["vue","slider","vue-mobile-slider","vue-mobile","vue-slider"],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --content-base demo --port 9000 --inline --open"
   },
-  "author": "",
+  "author": "JuGGnauT",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.26.0",
